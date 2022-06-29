@@ -1,7 +1,8 @@
 name: Dianoga Docker CI, .NET 4.6.2, Release
 on:
   push:
-    branches: [ feature/docker ]
+    branches:
+      - 'releases/**'
 env:
   BUILD_CONFIGURATION: Release
   DIANOGA_DOTNET_VERSION: net462
