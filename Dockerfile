@@ -7,6 +7,9 @@ FROM ${BUILD_IMAGE} AS build-env
 ARG BUILD_CONFIGURATION=
 ARG DOTNET_VERSION_ARG=
 
+RUN echo $env:BUILD_CONFIGURATION
+RUN echo $env:DOTNET_VERSION_ARG
+
 WORKDIR /
 # Add Sitecore Nuget source
 RUN dotnet nuget add source https://sitecore.myget.org/F/sc-packages/api/v3/index.json
