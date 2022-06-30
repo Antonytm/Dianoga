@@ -4,11 +4,13 @@ ARG BASE_IMAGE=mcr.microsoft.com/windows/nanoserver:1809
 ARG BUILD_IMAGE=mcr.microsoft.com/dotnet/framework/sdk:4.8
 
 FROM ${BUILD_IMAGE} AS build-env
-ARG BUILD_CONFIGURATION=
-ARG DOTNET_VERSION_ARG=
+ARG BUILD_CONFIGURATION=debug
+ARG DOTNET_VERSION_ARG=net48
+ARG TEST=test
 
 RUN echo $env:DOTNET_VERSION_ARG
 RUN echo $env:BUILD_CONFIGURATION
+RUN echo $env:test
 
 WORKDIR /
 # Add Sitecore Nuget source
