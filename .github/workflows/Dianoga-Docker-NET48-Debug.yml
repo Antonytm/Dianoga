@@ -1,7 +1,7 @@
 name: Dianoga Docker CI, .NET 4.8, Debug
 on:
   push:
-    branches: [ feature/docker ]
+    branches: [ feature/docker-build-fix ]
 env:
   BUILD_CONFIGURATION: Debug
   DIANOGA_DOTNET_VERSION: net48
