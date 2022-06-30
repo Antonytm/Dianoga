@@ -16,7 +16,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-  - uses: mr-smithers-excellent/docker-build-push@v5
+  - uses: mr-smithers-excellent/docker-build-push@v5.6
     name: Build & push Docker image
     with:
       image: antonytm/dianoga-assets
