@@ -25,4 +25,4 @@ runs:
       dockerfile: Dockerfile
       username: ${{ inputs.username }}
       password: ${{ inputs.password }}
-      buildArgs: BUILD_CONFIGURATION=${{ inputs.build_configuration }}, DOTNET_VERSION_ARG=${{ inputs.dotnet_version }}
+      buildArgs: BUILD_CONFIGURATION=${{ inputs.build_configuration }}, DOTNET_VERSION_ARG=${{ inputs.dotnet_version }}, TEST1={{inputs.dotnet_version}}, TEST2=test2

@@ -6,11 +6,15 @@ ARG BUILD_IMAGE=mcr.microsoft.com/dotnet/framework/sdk:4.8
 FROM ${BUILD_IMAGE} AS build-env
 ARG BUILD_CONFIGURATION=debug
 ARG DOTNET_VERSION_ARG=net48
-ARG TEST=test
+ARG TEST0=test
+ARG TEST1=
+ARG TEST2=
 
 RUN echo $env:DOTNET_VERSION_ARG
 RUN echo $env:BUILD_CONFIGURATION
-RUN echo $env:test
+RUN echo $env:TEST0
+RUN echo $env:TEST1
+RUN echo $env:TEST2
 
 WORKDIR /
 # Add Sitecore Nuget source
