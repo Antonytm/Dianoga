@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Docker build
+        run:
+          docker build -t antonytm/dianoga-assets:test1 .
       - name: Run custom action
         uses: ./.github/actions/publish-docker-hub
         with:
