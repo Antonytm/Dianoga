@@ -10,6 +10,8 @@ ARG TEST0=test
 ARG TEST1=
 ARG TEST2=
 
+SHELL ["powershell", "-Command"]
+
 RUN echo $env:DOTNET_VERSION_ARG
 RUN echo $env:BUILD_CONFIGURATION
 RUN echo $env:TEST0

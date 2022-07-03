@@ -7,7 +7,7 @@ env:
   DIANOGA_DOTNET_VERSION: net48
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
