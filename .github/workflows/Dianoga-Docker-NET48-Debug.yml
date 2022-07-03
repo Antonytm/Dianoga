@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Docker build
         run: |
+          docker pull mcr.microsoft.com/windows/nanoserver:1903
+          docker pull mcr.microsoft.com/dotnet/framework/sdk:4.8
           docker build -t antonytm/dianoga-assets:test1 . --platform windows/amd64
       - name: Run custom action
         uses: ./.github/actions/publish-docker-hub
