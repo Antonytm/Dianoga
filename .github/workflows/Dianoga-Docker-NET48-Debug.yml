@@ -13,12 +13,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Docker build
         run: |
-          cd c:\
-          dir
-          cd c:\\"Program Files"
-          dir
-          cd c:\\"Program Files"\Docker\
-          dir
           docker build -t antonytm/dianoga-assets:test1 . --platform windows/amd64
       - name: Run custom action
         uses: ./.github/actions/publish-docker-hub
