@@ -17,9 +17,11 @@ jobs:
           dir
           cd c:\\"Program Files"
           dir
-          c:\\"Program Files"\Docker\
+          cd c:\\"Program Files"\Docker\
           dir
-          c:\\"Program Files"\Docker\Docker\DockerCli.exe -SwitchWindowsEngine
+          cd c:\\"Program Files"\Docker\Docker
+          dir
+          DockerCli.exe -SwitchWindowsEngine
           docker build -t antonytm/dianoga-assets:test1 . --platform windows/amd64
       - name: Run custom action
         uses: ./.github/actions/publish-docker-hub
