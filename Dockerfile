@@ -1,7 +1,7 @@
 # escape=`
 
 ARG BASE_IMAGE=mcr.microsoft.com/windows/nanoserver:1903
-ARG BUILD_IMAGE=mcr.microsoft.com/dotnet/framework/sdk:4.8-20220614-windowsservercore-ltsc2019
+ARG BUILD_IMAGE=mcr.microsoft.com/dotnet/framework/sdk:4.8
 
 FROM ${BUILD_IMAGE} AS build-env
 ARG BUILD_CONFIGURATION=debug
