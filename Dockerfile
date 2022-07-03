@@ -13,6 +13,9 @@ ARG TEST2=
 RUN echo $env:DOTNET_VERSION_ARG
 RUN echo $env:BUILD_CONFIGURATION
 RUN echo $env:TEST0
+RUN echo %TEST0%
+RUN echo ${TEST0}
+RUN echo $TEST0
 RUN echo $env:TEST1
 RUN echo $env:TEST2
 
