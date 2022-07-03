@@ -12,7 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Docker build
-        run:
+        run: |
+          c:\\"Program Files"\Docker\Docker\DockerCli.exe -SwitchWindowsEngine
           docker build -t antonytm/dianoga-assets:test1 . --platform windows/amd64
       - name: Run custom action
         uses: ./.github/actions/publish-docker-hub
