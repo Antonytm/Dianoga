@@ -32,7 +32,7 @@ RUN dotnet restore
 # Copy everything else and build
 COPY src ./src
 RUN dotnet build -c %BUILD_CONFIGURATION%
-RUN mkdir ./src/bin
+RUN mkdir -p ./src/bin
 RUN Copy ./src/Dianoga/bin/%BUILD_CONFIGURATION%/%DOTNET_VERSION_ARG%/Dianoga.* ./src/bin/
 RUN Copy ./src/Dianoga/bin/%BUILD_CONFIGURATION%/%DOTNET_VERSION_ARG%/System.Threading.Tasks.Dataflow.dll ./src/bin/
 
