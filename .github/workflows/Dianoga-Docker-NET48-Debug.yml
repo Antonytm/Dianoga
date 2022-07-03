@@ -19,8 +19,6 @@ jobs:
           dir
           cd c:\\"Program Files"\Docker\
           dir
-          cd c:\\"Program Files"\Docker\Docker
-          dir
           docker build -t antonytm/dianoga-assets:test1 . --platform windows/amd64
       - name: Run custom action
         uses: ./.github/actions/publish-docker-hub
