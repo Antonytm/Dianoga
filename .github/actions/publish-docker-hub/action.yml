@@ -20,7 +20,7 @@ runs:
     name: Build & push Docker image
     with:
       image: antonytm/dianoga-assets
-      tags: 6.0.1-${{ inputs.dotnet_version }}-${{ inputs.build_configuration }}-${{ github.run_number }}, latest-${{ inputs.dotnet_version }}-${{ inputs.build_configuration }}
+      tags: 6.1.0-${{ inputs.dotnet_version }}-${{ inputs.build_configuration }}-${{ github.run_number }}, latest-${{ inputs.dotnet_version }}-${{ inputs.build_configuration }}
       registry: docker.io
       dockerfile: Dockerfile
       username: ${{ inputs.username }}
